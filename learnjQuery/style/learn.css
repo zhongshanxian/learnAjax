@@ -1,0 +1,19 @@
+#title
+{
+	color: red;
+}
+#div1
+{
+	width:200px;
+	height: 200px;
+	position: relative;/*要将div1的position设置为relative，absolute，
+	fix他才会移动，否则只是静态元素*/
+}
+.blue
+{
+	color: blue;
+}
+.red
+{
+	background-color: red;
+}

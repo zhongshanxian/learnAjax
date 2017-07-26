@@ -1,0 +1,136 @@
+http://www.runoob.com/jquery/jquery-examples.html
+
+1.$(selector).action()
+$(this).hide() - 隐藏当前元素
+$("p").hide() - 隐藏所有 <p> 元素
+$("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
+$("#test").hide() - 隐藏所有 id="test" 的元素
+$("p:first")- 选取第一个 <p> 元素
+$("ul li:first")	选取第一个 <ul> 元素的第一个 <li> 元素
+$("ul li:first-child")	选取每个 <ul> 元素的第一个 <li> 
+$("[href]")	选取带有 href 属性的元素
+$("a[target='_blank']")	选取所有 target 属性值等于 "_blank" 的 <a> 元素
+$("a[target!='_blank']")	选取所有 target 属性值不等于 "_blank" 的 <a> 元素	
+$(":button")	选取所有 type="button" 的 <input> 元素 和 <button> 元素
+$("tr:even")	选取偶数位置的 <tr> 元素
+$("tr:odd")	选取奇数位置的 <tr> 元素
+
+2.常见 DOM 事件：
+鼠标事件	   键盘事件	 表单事件	 文档/窗口事件
+click	       keypress	 submit	   load
+dblclick	   keydown	 change	   resize
+mouseenter	 keyup	   focus	   scroll
+mouseleave   blur	     unload 
+mousedown
+mouseup
+hover
+
+3.隐藏，弹出，淡入，淡出
+$(selector).hide(speed,callback);
+$(selector).show(speed,callback);
+$(selector).toggle(speed,callback); 
+$(selector).fadeIn(speed,callback)
+$(selector).fadeOut(speed,callback)
+$(selector).fadeToggle(speed,callback)
+$(selector).fadeTo(speed,opacity,callback)不透明度（值介于 0 与 1 之间）
+
+4.滑动
+$(selector).slideToggle(speed,callback);
+$(selector).slideUp(speed,callback);
+$(selector).slideDown(speed,callback);
+
+5.动画 - animate() 方法 || 动画-停止
+$(selector).animate({params},speed,callback);
+	必需的 params 参数定义形成动画的 CSS 属性。
+	可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	可选的 callback 参数是动画完成后所执行的函数名称。
+
+$(selector).stop(stopAll,goToEnd);
+	只是停止当前的运动，接下来的运动2继续执行
+
+6.获取内容，设置内容
+text() - 设置或返回所选元素的文本内容，针对非input
+html() - 设置或返回所选元素的内容（包括 HTML 标记）
+val() - 设置或返回表单字段的值,针对input
+attr()-方法用于获取属性值
+
+7.添加新的 HTML 内容,删除元素/内容
+append() - 在被选元素的结尾插入内容
+prepend() - 在被选元素的开头插入内容
+after() - 在被选元素之后插入内容
+before() - 在被选元素之前插入内容
+remove() - 删除被选元素（及其子元素）
+empty() - 从被选元素中删除子元素
+
+8.jQuery 操作 CSS
+addClass() - 向被选元素添加一个或多个类
+removeClass() - 从被选元素删除一个或多个类
+toggleClass() - 对被选元素进行添加/删除类的切换操作
+css() - 设置或返回样式属性
+
+9.jQuery 尺寸方法
+width()单纯的宽高=height/width
+height()
+innerWidth()内边框的宽高=height/width+padding
+innerHeight()
+outerWidth()//外边框的宽高=height/width+padding+borderwidth
+outerHeight()
+outerWidth(true)//总的宽高=height/width+padding+borderwidth+margin
+outerHeight(true)
+
+10.向上遍历 DOM 树
+parent()--返回被选元素的直接父元素
+parents()--返回被选元素的所有祖先元素
+parents("ul")--返回被选元素的所有祖先元素,并且该元素为ul
+parentsUntil()--返回介于两个给定元素之间的所有祖先元素
+
+11.向下遍历 DOM 树
+children()--返回被选元素的所有直接子元素
+find()--返回被选元素的后代元素，一路向下直到最后一个后代
+
+12.遍历 - 同胞(siblings)
+siblings()--返回被选元素的所有同胞元素
+next()--返回被选元素的下一个同胞元素
+nextAll()--返回被选元素的所有跟随的同胞元素
+nextUntil()--返回介于两个给定参数之间的所有跟随的同胞元素
+prev()--沿着同胞之前元素遍历
+prevAll()--沿着同胞之前元素遍历
+prevUntil()--沿着同胞之前元素遍历
+
+13.遍历- 过滤
+$("div p").first();--选取首个 <div> 元素内部的第一个 <p> 元
+$("div p").last();--选择最后一个 <div> 元素中的最后一个 <p> 元素
+$("p").eq(1);--索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 <p> 元素（索引号 1）
+$("p").filter(".url");--返回带有类名 "url" 的所有 <p> 元素
+$("p").not(".url");--返回不带有类名 "url" 的所有 <p> 元素
+
+14.AJAX load() 方法
+$(selector).load(URL,data,callback);
+回调函数可以设置不同的参数：
+responseTxt - 包含调用成功时的结果内容
+statusTXT - 包含调用的状态
+xhr - 包含 XMLHttpRequest 对象
+
+15.AJAX get() 和 post() 方法
+GET - 从指定的资源请求数据
+POST - 向指定的资源提交要处理的数据
+
+16.jQuery $.get() 方法
+$.get() 方法通过 HTTP GET 请求从服务器上请求数据。
+语法：
+$.get(URL,callback);
+jQuery $.post() 方法
+$.post() 方法通过 HTTP POST 请求从服务器上请求数据。
+语法:
+$.post(URL,data,callback);
+
+17.noConflict() 方法会释放对 $ 标识符的控制
+
+18.部分事件 http://www.runoob.com/jquery/jquery-ref-events.html
+event.pageX	返回相对于文档左边缘的鼠标位置
+event.pageY	返回相对于文档上边缘的鼠标位置
+event.preventDefault()	阻止事件的默认行为
+off()	移除通过 on() 方法添加的事件处理程序
+on()	向元素添加事件处理程序
+
+19.树形文件夹http://www.runoob.com/jquery/jquery-plugin-treeview.html

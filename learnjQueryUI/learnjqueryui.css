@@ -1,0 +1,59 @@
+/*拖动*/
+#draggable
+{
+	width:100px;
+	padding-left: 20px;
+}
+
+/*addClass()*/
+.small-gray {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+}
+.big-gray {
+    width: 150px;
+    height: 150px;
+    background-color: #0f0;
+}
+.big-blue {
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+}
+.ui-effects-transfer {
+    border: 1px dotted black;
+  }
+
+/*可调整尺寸小部件*/
+#resizable {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+}
+
+/*可选择小部件*/
+#selectable .ui-selecting {
+    background: #999;
+}
+#selectable .ui-selected {
+  background: #f00;
+}
+
+/*菜单部件*/
+#menu
+{
+	width: 80px;
+}
+
+/*旋转器*/
+#spinner
+{
+	width: 200px;
+}
+
+/*标签页*/
+#tabs
+{
+	width: 500px;
+}

@@ -1,0 +1,11 @@
+1.实例包含了4个网格，但是我们在小设备浏览时无法确定网格显示的位置。
+为了解决这个问题，可以使用 .clearfix class和 响应式实用工具来解决
+http://www.runoob.com/bootstrap/bootstrap-grid-system.html
+在二和三之间添加一行代码<div class="clearfix visible-xs"></div>
+
+2.左边留出三列
+col-md-offset-3
+
+
+
+

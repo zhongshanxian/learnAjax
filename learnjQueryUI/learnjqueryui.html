@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn jQuery UI</title>
+	<meta charset="utf-8">
+	<!--下载jQuery UI 的插件包，调用以下文件，即可使用jQuery UI-->
+	<link href="E:\weblearning\kuangjia\jQuery UI\jquery-ui-1.12.1.custom-1\jquery-ui-1.12.1.custom\jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="learnjqueryui.css">
+	<script src="E:\weblearning\kuangjia\jQuery UI\jquery-ui-1.12.1.custom-1\jquery-ui-1.12.1.custom\external\jquery\jquery.js"></script>
+	<script src="E:\weblearning\kuangjia\jQuery UI\jquery-ui-1.12.1.custom-1\jquery-ui-1.12.1.custom\jquery-ui.js"></script>
+</head>
+<body>
+
+<h2>拖动</h2>
+<div id="draggable" class="ui-widget-content">
+  <p>请拖动我！</p>
+</div>
+
+----------------------
+<h2>日期获取</h2>
+<input type="text" name="date" id="date" />
+<br>
+
+----------------------
+<h2>滑块</h2>
+<div id="slider"></div>
+当前值：<span id="sliderValue">*</span>
+<br>
+
+----------------------
+<h2>进度条</h2>
+<div id="progressbar"></div>
+当前值：<span id="progressbarValue"></span>%
+
+----------------------
+<h2>各种特效</h2>
+<div class="small-gray"></div>
+<div class="big-gray"></div>
+
+----------------------
+<h2>可调整尺寸小部件（Resizable Widget）</h2>
+<div id="resizable"></div>
+
+----------------------
+<h2>可选择小部件（Selectable Widget）</h2>
+<ul id="selectable">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+</ul>
+
+----------------------
+<h2>使用图标</h2>
+<span class="ui-icon ui-icon-arrowthick-1-n"></span>
+<br>
+
+----------------------
+<h2>堆叠元素（Stacking Elements）</h2>
+<p>当使用 ui-front 时，您必须设置 position 为 relative、 absolute 或 fixed，以便应用 z-index。</p>
+
+----------------------
+<h2>折叠面板部件（Accordion Widget）</h2>
+<div id="accordion">
+  <h3>部分 1</h3>
+  <div>
+    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+    Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+    condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+    Nam mi. Proin viverra leo ut odio.</p>
+  </div>
+  <h3>部分 2</h3>
+  <div>
+    <p>Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+    Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+    faucibus interdum tellus libero ac justo.</p>
+  </div>
+  <h3>部分 3</h3>
+  <div>
+    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+    Quisque lobortis.Phasellus pellentesque purus in massa.</p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+</div>
+
+----------------------
+<h2>自动完成部件（Autocomplete Widget）</h2>
+<label for="autocomplete">选择一个编程语言：</label>
+<input id="autocomplete">
+
+----------------------
+<h2>按钮部件（Button Widget）</h2>
+<form>
+    <p>最喜欢的 jQuery 项目</p>
+    <div id="radio">
+      <input type="radio" id="sizzle" name="project">
+      <label for="sizzle">Sizzle</label>
+ 
+      <input type="radio" id="qunit" name="project" checked="checked">
+      <label for="qunit">QUnit</label>
+ 
+      <input type="radio" id="color" name="project">
+      <label for="color">Color</label>
+    </div>
+</form>
+
+----------------------
+<h2>菜单部件（Menu Widget）</h2>
+<ul id="menu">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+  <li><a href="#">Item 3</a>
+    <ul>
+      <li><a href="#">Item 3-1</a></li>
+      <li><a href="#">Item 3-2</a></li>
+      <li><a href="#">Item 3-3</a></li>
+      <li><a href="#">Item 3-4</a></li>
+      <li><a href="#">Item 3-5</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 4</a></li>
+  <li><a href="#">Item 5</a></li>
+</ul>
+
+----------------------
+<h2>菜单部件（Menu Widget）</h2>
+<input id="spinner">
+<br>
+
+----------------------
+<h2>标签页部件（Tabs Widget）</h2>
+<div id="tabs">
+  <ul>
+    <li><a href="#fragment-1"><span>一</span></a></li>
+    <li><a href="#fragment-2"><span>二</span></a></li>
+    <li><a href="#fragment-3"><span>三</span></a></li>
+  </ul>
+  <div id="fragment-1">
+    <p>第一个标签是默认激活的：</p>
+    <pre><code>$( "#tabs" ).tabs(); </code></pre>
+  </div>
+  <div id="fragment-2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+  <div id="fragment-3">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+</div>
+
+----------------------
+<h2>工具提示框部件（Tooltip Widget）</h2>
+<input title="输入帮助">
+
+
+
+
+
+<br><br><br><br><br>
+<script type="text/javascript" src="learnjqueryui.js"></script>
+</body>
+</html>

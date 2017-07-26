@@ -1,0 +1,82 @@
+1.XML DOM 属性
+一些典型的 DOM 属性：
+x.nodeName - x 的名称
+x.nodeValue - x 的值
+x.parentNode - x 的父节点
+x.childNodes - x 的子节点
+x.attributes - x 的属性节点
+nodeType
+注释：在上面的列表中，x 是一个节点对象。
+
+2.XML DOM 方法
+x.getElementsByTagName(name) - 获取带有指定标签名称的所有元素
+x.appendChild(node) - 向 x 插入子节点
+x.removeChild(node) - 从 x 删除子节点
+注释：在上面的列表中，x 是一个节点对象。
+
+3.bookstore下面的子节点，包括元素节点和空节点
+x=xmlDoc.documentElement.childNodes;文档节点 
+
+4.节点类型	NodeType  http://www.runoob.com/dom/dom-nodetype.html
+		元素			1
+		属性			2
+		文本			3
+		注释			8
+		文档			9
+
+5.Internet Explorer 将不会把空的空白或换行作为文本节点，而其他浏览器会。
+IE 浏览器会输出 4（提醒 4 个子节点），而其他浏览器会输出 9（提醒 9 个子节点）。
+
+6.在 XML DOM 中，节点的关系被定义为节点的属性：
+parentNode
+childNodes
+firstChild
+lastChild
+nextSibling
+previousSibling
+
+7.XML DOM 删除节点
+removeChild() 方法删除指定节点。
+removeAttribute() 方法删除指定属性。
+removeNamedItem()	删除指定的节点（通过名称）。
+
+8.创建新的 book 元素, title 元素及 node 节点，属性节点，注释节点
+newNode=xmlDoc.createElement("book");
+newTitle=xmlDoc.createElement("title");
+newText=xmlDoc.createTextNode("A Notebook");
+newatt=xmlDoc.createAttribute("edition");
+newatt.nodeValue="first";
+newComment=xmlDoc.createComment("Revised April 2008");
+
+CDATA 区段包含了不会被解析器解析的文本。
+newCDATA=xmlDoc.createCDATASection("Special Offer & Book Sale");
+
+9.replaceData() 方法有三个参数：
+offset - 在何处开始替换字符。offset 值以 0 开始。
+length - 要替换多少字符
+string - 要插入的字符串
+x.replaceData(0,8,"Easy");使用 replaceData 方法把文本节点的前 8 个字符替换为 "Easy"
+Everyday Italian
+Easy Italian
+
+10.在某节点前插入节点，在最后一个子节点后添加一个节点，从索引0开始插入一个字符串
+x.insertBefore(newNode,y[3]);
+x.appendChild(newel)==x.insertBefore(newNode,null) ;
+x.insertData(0,"Easy ");
+
+11TEXT对象的方法
+textNode.appendData(string)	向节点追加数据。
+deleteData(start,length)	从节点删除数据。
+insertData(start,string)	向节点中插入数据。
+replaceData(start,length,string)	替换节点中的数据。
+replaceWholeText(text)	使用指定文本来替换此节点以及所有相邻的文本节点。
+splitText(offset)	在指定的偏移处将此节点拆分为两个节点，同时返回包含偏移处之后的文本的新节点。
+substringData(start,length)	从节点提取数据。
+
+12.XMLHttpRequest对象
+http://www.runoob.com/dom/dom-http.html
+
+13.XML DOM Parse Error 对象
+http://www.runoob.com/dom/dom-errors.html
+火狐浏览器 
+http://www.runoob.com/dom/dom-errors-crossbrowser.html

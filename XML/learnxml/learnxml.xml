@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--添加style
+<?xml-stylesheet type="text/css" href="style/learnxml.css"?>
+-->
+
+<!--命名空间
+xmlns:h="http://www.w3.org/TR/html4/"
+xmlns:f="http://www.w3cschool.cc/furniture"
+<h:table></h:table>
+<f:table></f:table>
+-->
+
+<!--edit by xian-->
+
+<!--菜单-->
+<menu>
+	<front_dish>
+		<title>前菜</title>
+		<dish>
+			<name belong='front_dish'>面包</name>
+			<price>$10</price>
+		</dish>
+		<dish>
+			<name>鱼子酱</name>
+			<price>$100</price>
+		</dish>
+		<dish>
+			<name>鹅肝酱</name>
+			<price>$103</price>
+		</dish>
+	</front_dish>
+	<main_course>
+		<title>主菜</title>
+		<dish>
+			<name>意大利面</name>
+			<price>$20</price>
+		</dish>
+		<dish>
+			<name>牛排</name>
+			<price>$50</price>
+		</dish>
+		<dish>
+			<name>法式烤派</name>
+			<price>$45</price>
+		</dish>
+	</main_course>
+	<soup>
+		<title>汤</title>
+		<dish>
+			<name>清汤</name>
+			<price>$8</price>
+		</dish>
+		<dish>
+			<name>奶油汤</name>
+			<price>$12</price>
+		</dish>
+		<dish>
+			<name>罗宋汤</name>
+			<price>$15</price>
+		</dish>
+	</soup>
+	<dissert>
+		<title>甜品</title>
+		<dish>
+			<name>提拉米苏</name>
+			<price>$21</price>
+		</dish>
+		<dish>
+			<name>千层饼</name>
+			<price>$23</price>
+		</dish>
+		<dish>
+			<name>马卡龙</name>
+			<price>$30</price>
+		</dish>
+	</dissert>
+</menu>
+
+
+<!--便签
+<note>
+	<to>xian</to>
+	<from>zhong</from>
+	<heading>助班报名</heading>
+	<message>你好！我申请报名助班。</message>
+</note>
+-->

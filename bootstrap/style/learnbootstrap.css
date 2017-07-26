@@ -1,0 +1,39 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;/*设定字体*/
+  font-size: 14px;
+  line-height: 1.428571429;/*行高*/
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.container {
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.img-responsive {
+  display: inline-block;/*可以设置宽高的内联形式*/
+  height: auto;
+  max-width: 100%;/*宽度根据设置浏览器的大小设定，高度跟着改变*/
+}
+
+/*链接样式*/
+a:hover,
+a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/*在不同的媒体查询阈值范围内都为 container 设置了max-width*/
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+}

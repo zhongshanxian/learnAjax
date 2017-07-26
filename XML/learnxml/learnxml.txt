@@ -1,0 +1,17 @@
+1.XML 和 HTML 为不同的目的而设计：
+XML 被设计用来传输和存储数据，其焦点是数据的内容。
+HTML 被设计用来显示数据，其焦点是数据的外观。
+HTML 旨在显示信息，而 XML 旨在传输信息。
+
+2.在 XML 中，省略关闭标签是非法的。所有元素都必须有关闭标签。
+XML 标签对大小写敏感。
+在 XML 中，XML 的属性值必须加引号。
+在 XML 中，文档中的空格不会被删减。
+在 XML 中，您应该尽量避免使用属性。如果信息感觉起来很像数据，那么请使用元素
+
+3.实体引用来代替字符
+&lt;	<	less than
+&gt;	>	greater than
+&amp;	&	ampersand
+&apos;	'	apostrophe
+&quot;	"	quotation mark

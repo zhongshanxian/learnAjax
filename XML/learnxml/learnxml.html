@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn XML</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		td
+		{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<h1>申请邮件</h1>
+<div>
+	<b>接受方：</b><span id="to"></span><br>
+	<b>发送方：</b><span id="from"></span><br>
+	<b>标题：</b><span id="heading"></span><br>
+	<b>内容：</b><span id="message"></span><br>
+</div>
+----------------------
+<script type="text/javascript">
+/*实例一
+	if(window.XMLHttpRequest)
+	{
+		//code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		//code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.open("GET","learnxml.xml",false);
+	xmlhttp.send();
+	xmlDoc=xmlhttp.responseXML;
+
+	document.getElementById("to").innerHTML=xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+	document.getElementById("from").innerHTML=xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+	document.getElementById("heading").innerHTML=xmlDoc.getElementsByTagName("heading")[0].childNodes[0].nodeValue;
+	document.getElementById("message").innerHTML=xmlDoc.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+*/
+
+/*实例二：跨浏览器
+txt="<note>";
+txt=txt+"<to>xian</to>";
+txt=txt+"<from>zhong</from>";
+txt=txt+"<heading>助班报名</heading>";
+txt=txt+"<message>你好！我申请报名助班。</message>";
+txt=txt+"</note>";
+if(window.DOMParser)
+{
+	parser=new DOMParser();
+	xmlDoc=parser.parseFromString(txt,"text/xml");
+}
+else
+{
+	xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+	xmlDoc.async=false;
+	xmlDoc.loadXML(txt);
+}
+document.getElementById("to").innerHTML=xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+	document.getElementById("from").innerHTML=xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+	document.getElementById("heading").innerHTML=xmlDoc.getElementsByTagName("heading")[0].childNodes[0].nodeValue;
+	document.getElementById("message").innerHTML=xmlDoc.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+*/
+
+//实例三
+if(window.XMLHttpRequest)
+{
+	//code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+}
+else
+{
+	//code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","learnxml.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.write("<table border='1' width='400'>");
+var dish=xmlDoc.getElementsByTagName("dish");
+var prices=xmlDoc.getElementsByTagName("price");
+var names=xmlDoc.getElementsByTagName("name");
+for(var i=0,j=0;i<dish.length,j<4;i++,j++)
+{
+	document.write("<tr><td>");
+	document.write(xmlDoc.getElementsByTagName("title")[j].childNodes[0].nodeValue);
+	document.write("</td><td onclick='display(this);'>");
+	document.write(dish[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+	document.write("</td><td onclick='display(this);'>");
+	document.write(dish[i+1].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+	document.write("</td><td onclick='display(this);'>");
+	document.write(dish[i+2].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+	i=i+2;
+}
+document.write("</table><br>");
+document.write("价格："+"<span id='price'></span>");
+names[0].setAttribute("tasty","good");
+console.log(names[0].getAttribute("tasty"));
+function display(e){
+  for(var i=0;i<names.length;i++)
+  {
+  	if(e.innerHTML==names[i].childNodes[0].nodeValue)
+  	{
+  		if(names[i].childNodes[0].nodeValue=="面包")
+  		{
+  			names[i].childNodes[0].nodeValue="馒头";
+        console.log(names[i].childNodes[0].nodeValue);
+  		}
+  		document.getElementById("price").innerHTML=prices[i].childNodes[0].nodeValue;
+  	}
+  }
+}
+//删除第一个 <book> 元素的第一个节点：
+//x=xmlDoc.getElementsByTagName("book")[0];
+//x.removeChild(x.childNodes[0]);
+//创建一个元素
+//newel=xmlDoc.createElement("edition");
+//newtext=xmlDoc.createTextNode("First");
+//newel.appendChild(newtext);
+
+/*实例四
+CDATA 部分中的所有内容都会被解析器忽略。
+CDATA 部分由 "<![CDATA[" 开始，由 "]]>" 结束：
+<![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+{
+return 1;
+}
+else
+{
+return 0;
+}
+}
+]]>
+*/
+</script>
+</body>
+</html>

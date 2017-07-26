@@ -1,0 +1,15 @@
+1.xmlhttp.open("GET","ajax_info.txt",true);
+	method：请求的类型；GET 或 POST
+
+	url：文件在服务器上的位置,该文件可以是任何类型的文件，比如 .txt 和 .xml，或者服务器脚本文件，比如 .asp 和 .php （在传回响应之前，能够在服务器上执行任务）
+	
+	async：true（异步）或 false（同步）,XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async 参数必须设置为 true
+	
+	xmlhttp.send();
+
+2.GET 还是 POST？
+与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+然而，在以下情况中，请使用 POST 请求：
+无法使用缓存文件（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST 没有数据量限制）
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
